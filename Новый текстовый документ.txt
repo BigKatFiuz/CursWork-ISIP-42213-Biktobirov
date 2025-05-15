@@ -1,0 +1,14 @@
+const db = mysql.createConnection({
+  host localhost,
+  user root, 
+  password 6308,
+  database tetris_game
+});
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    score1 INT DEFAULT 0,
+    score2 INT DEFAULT 0
+);

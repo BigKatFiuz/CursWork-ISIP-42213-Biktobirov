@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Тетрис. Режим игры</title>
+  </head>
+  <body>
+    <!-- Окно авторизации-->
+    <div id="authModal" class="modal">
+      <div class="modal-content">
+        <h2>Авторизация / Регистрация</h2>
+        <input type="text" id="username" placeholder="Имя пользователя" />
+        <input type="password" id="password" placeholder="Пароль" />
+        <div class="btnContainer">
+          <button id="loginBtn">Войти</button>
+          <button id="registerBtn">Регистрация</button>
+        </div>
+        <p id="authMessage"></p>
+      </div>
+    </div>
+
+    <!-- Экран выбора режима игры -->
+    <div id="modeSelect" class="mode-select" style="display: none;">
+      <h2>Выберите режим игры</h2>
+      <div class="modeButtons">
+        <button id="singlePlayerBtn">Одиночная игра</button>
+        <button id="multiPlayerBtn">Игра для двоих</button>
+      </div>
+    </div>
+
+    <div id="gameContainer" style="display: none;">
+      <!-- Кнопка паузы -->
+      <button id="pauseBtn">Пауза</button>
+       <button id="surrenderBtn">Сдаться</button>
+      <canvas id="gameCanvas" width="600" height="600"></canvas>
+      <div id="nextPieces">
+        <div class="nextPieceContainer" id="nextPieceContainer1">
+          <h3>Следующая фигура</h3>
+          <canvas id="nextPiece1" width="120" height="120"></canvas>
+        </div>
+        <div class="nextPieceContainer" id="nextPieceContainer2">
+          <h3>Следующая фигура (Игрок 2)</h3>
+          <canvas id="nextPiece2" width="120" height="120"></canvas>
+        </div>
+      </div>
+      <!-- Счет -->
+      <div id="scores">
+        <div id="scoreDiv1">Игрок 1: <span id="score1">0</span></div>
+        <div id="scoreDiv2">Игрок 2: <span id="score2">0</span></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
